@@ -36,15 +36,11 @@
         position: relative;
         margin-top: 12px;
         background-color: $Darkbackground;
-        height: 210px;
+
         border-radius: 10px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0 15px;
-        @include media(505) {
-          justify-content: center;
-        }
+
+        padding: 30px 15px;
+
         > .swiper {
           // margin-left: 0;
           > .swiper-wrapper {

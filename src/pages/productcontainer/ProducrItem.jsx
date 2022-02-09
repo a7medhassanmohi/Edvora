@@ -17,8 +17,6 @@ function ProducrItem({ productName, products }) {
               navigation={true}
               modules={[Navigation]}
               grabCursor={true}
-              spaceBetween={0}
-              slidesPerView={products.length < 4 ? products.length : 4}
               className="mySwiper"
               breakpoints={{
                 280: {
@@ -38,6 +36,10 @@ function ProducrItem({ productName, products }) {
                   spaceBetween: 10,
                 },
                 960: {
+                  slidesPerView: products.length < 4 ? products.length : 4,
+                  spaceBetween: 10,
+                },
+                1350: {
                   slidesPerView: products.length < 4 ? products.length : 4,
                   spaceBetween: 10,
                 },
