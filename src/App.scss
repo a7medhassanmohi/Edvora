@@ -1,0 +1,31 @@
+@import "./style/index.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  background-color: $background;
+  min-height: 100vh;
+  color: white;
+  font-family: SFProDisplayRegular;
+  .layout {
+    @include flex(s, s, 40px);
+    padding: 20px;
+    > .filter_container {
+      @include width(2, 40px, 20%);
+      background-color: $Darkbackground;
+      border-radius: 8px;
+      @include media(1250) {
+        @include width(2, 40px, 100%);
+      }
+    }
+    > .product_container {
+      @include media(1250) {
+        @include width(2, 40px, 100%);
+      }
+      @include width(2, 40px, 75%);
+    }
+  }
+}

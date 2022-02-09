@@ -1,0 +1,157 @@
+@import "../../style//index.scss";
+
+.product_container {
+  .main-title {
+    > h1 {
+      font-family: SFProDisplayRegular;
+      font-size: 35px;
+    }
+    margin-bottom: 21px;
+  }
+  > h4.subtitle {
+    font-family: SFProDisplayRegular;
+    font-size: 25px;
+    color: $graytext;
+    margin-bottom: 21px;
+    font-weight: 200;
+  }
+  > .items_container {
+    > .item {
+      margin-bottom: 45px;
+
+      > .title {
+        > h4 {
+          font-family: SFProDisplayRegular;
+          font-size: 20px;
+          font-weight: 200;
+          margin-bottom: 4px;
+        }
+        > .line {
+          height: 1px;
+          width: 100%;
+          background-color: $graytext;
+        }
+      }
+      > .item_container {
+        position: relative;
+        margin-top: 12px;
+        background-color: $Darkbackground;
+        height: 210px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 15px;
+        @include media(505) {
+          justify-content: center;
+        }
+        > .swiper {
+          // margin-left: 0;
+          > .swiper-wrapper {
+            > .swiper-slide {
+              > .card {
+                min-width: 210px;
+                min-height: 150px;
+                background-color: $background;
+                border-radius: 5px;
+                padding: 13px;
+                > .card_head {
+                  @include flex(sb, s, 10px);
+                  > .img {
+                    @include width(2, 10px, 38%);
+                    width: 100%;
+                    img {
+                      max-width: 100%;
+                      height: 70px;
+                      display: block;
+                      object-fit: cover;
+                      border-radius: 10px;
+                    }
+                  }
+                  > .content {
+                    @include width(2, 10px, 62%);
+                    > .productname {
+                      font-family: SFProDisplayRegular;
+                      font-size: 15px;
+                      font-weight: 200;
+                      margin-bottom: 10px;
+                    }
+                    > .productbrand {
+                      font-family: SFProDisplayRegular;
+                      font-size: 13px;
+                      font-weight: 200;
+                      color: $graytext;
+                      margin-bottom: 10px;
+                    }
+                    > .price {
+                      font-family: SFProDisplayRegular;
+                      font-size: 13px;
+                      font-weight: 200;
+                      color: $white;
+                      margin-bottom: 10px;
+                    }
+                  }
+                }
+                > .card_body {
+                  @include flex(sb, c, 0);
+                  margin-bottom: 14px;
+                  > .location {
+                    > p {
+                      font-size: 11px;
+                      font-family: SFProDisplayRegular;
+                      color: $graytext;
+                      margin-bottom: 5px;
+                      letter-spacing: 1.1px;
+                    }
+                  }
+                  > .date {
+                    > p {
+                      font-size: 13px;
+                      font-family: SFProDisplayRegular;
+                      color: $graytext;
+                      margin-bottom: 5px;
+                    }
+                  }
+                }
+                > .card_footer {
+                  p {
+                    font-size: 11px;
+                    font-family: SFProDisplayRegular;
+                    color: $graytext;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper {
+  position: static;
+  .swiper-button-prev {
+    color: $graytext;
+    left: -34px;
+    @include media(950) {
+      left: -22px;
+    }
+    &::after {
+      font-size: 30px;
+    }
+  }
+  .swiper-button-next {
+    color: $graytext;
+    right: -34px;
+    @include media(950) {
+      right: -22px;
+    }
+    &::after {
+      font-size: 30px;
+    }
+  }
+  .swiper-button-disabled {
+    display: none;
+  }
+}
